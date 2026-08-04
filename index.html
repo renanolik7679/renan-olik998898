@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog do Neymar</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header{
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding: 20px;
+        }
+
+        main{
+            background-color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        img{
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        h2{
+            color: #000000;
+        }
+
+        p{
+            color: #080808;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Blog do Neymar</h1>
+    <p>Tudo sobre a carreira, conquistas e curiosidades de Neymar Jr.</p>
+</header>
+
+<main>
+    <img src="neymar.jpg"
+         alt="Neymar Jr. durante uma partida de futebol.">
+
+    <div>
+        <h2>Primeiro Post</h2>
+
+        <p><strong>Por:</strong> Renan Olik</p>
+
+        <p>
+            Neymar Jr. é um dos maiores jogadores brasileiros da atualidade.
+            Conhecido por sua habilidade, velocidade e dribles, conquistou
+            títulos importantes por clubes e pela Seleção Brasileira. Neste
+            blog você encontrará notícias, curiosidades e momentos marcantes
+            da carreira do craque.
+        </p>
+    </div>
+</main>
+
+</body>
+</html>
+<button onclick="curtir()">
+    ❤️ <span id="likes">0</span>
+ </button>
+ 
+ 
+ <button onclick="gostar()">
+    👎​​ <span id="gostei">0</span>
+ </button>
+ 
+ 
+ <script>
+    let likes = 0;
+    let gostei = 0;
+ 
+ 
+    let curtiu = false;
+    let gostou = false;
+ 
+ 
+    function curtir() {
+        if (curtiu) {
+            likes--;
+            curtiu = false;
+        } else {
+            likes++;
+            curtiu = true;
+        }
+        document.getElementById("likes").textContent = likes;
+    }
+ 
+ 
+    function gostar() {
+        if (gostou) {
+            gostei--;
+            gostou = false;
+        } else {
+            gostei++;
+            gostou = true;
+        }
+        document.getElementById("gostei").textContent = gostei;
+    }
+ </script>
+ 
